@@ -2,75 +2,16 @@
 
 
 [[projects]]
-  name = "github.com/blang/semver"
+  name = "github.com/briandowns/spinner"
   packages = ["."]
-  revision = "2ee87856327ba09384cabd113bc6b5d174e9ec0f"
-  version = "v3.5.1"
+  revision = "48dbb65d7bd5c74ab50d53d04c949f20e3d14944"
+  version = "1.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/chzyer/readline"
+  name = "github.com/fatih/color"
   packages = ["."]
-  revision = "f6d7a1f6fbf35bbf9beb80dc63c56a29dcfb759f"
-
-[[projects]]
-  name = "github.com/golang/protobuf"
-  packages = ["proto"]
-  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
-  version = "v1.1.0"
-
-[[projects]]
-  name = "github.com/google/go-github"
-  packages = ["github"]
-  revision = "e48060a28fac52d0f1cb758bc8b87c07bac4a87d"
-  version = "v15.0.0"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/google/go-querystring"
-  packages = ["query"]
-  revision = "53e6ce116135b80d037921a7fdd5138cf32d7a8a"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/inconshreveable/go-update"
-  packages = [
-    ".",
-    "internal/binarydist",
-    "internal/osext"
-  ]
-  revision = "8152e7eb6ccf8679a64582a66b78519688d156ad"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/janeczku/go-spinner"
-  packages = ["."]
-  revision = "cf8ef1d64394bf465addbb71bbe1c121f8b0f2e3"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/juju/ansiterm"
-  packages = [
-    ".",
-    "tabwriter"
-  ]
-  revision = "720a0952cc2ac777afc295d9861263e2a4cf96a1"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/lunixbochs/vtclean"
-  packages = ["."]
-  revision = "d14193dfc626125c831501c1c42340b4248e1f5a"
-
-[[projects]]
-  name = "github.com/manifoldco/promptui"
-  packages = [
-    ".",
-    "list",
-    "screenbuf"
-  ]
-  revision = "3dd80c00b7cb0bc779d1c204da6f3ae0fa6a4eee"
-  version = "v0.3.0"
+  revision = "5b77d2a35fb0ede96d138fc9a99f5c9b6aef11b4"
+  version = "v1.7.0"
 
 [[projects]]
   name = "github.com/mattn/go-colorable"
@@ -97,29 +38,6 @@
   version = "v0.8.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/rhysd/go-github-selfupdate"
-  packages = ["selfupdate"]
-  revision = "41c1bbb0804a2994dae69502a8c76e7c456ad45e"
-
-[[projects]]
-  name = "github.com/tcnksm/go-gitconfig"
-  packages = ["."]
-  revision = "d154598bacbf4501c095a309753c5d4af66caa81"
-  version = "v0.1.2"
-
-[[projects]]
-  name = "github.com/ulikunitz/xz"
-  packages = [
-    ".",
-    "internal/hash",
-    "internal/xlog",
-    "lzma"
-  ]
-  revision = "0c6b41e72360850ca4f98dc341fd999726ea007f"
-  version = "v0.5.4"
-
-[[projects]]
   name = "github.com/urfave/cli"
   packages = ["."]
   revision = "cfb38830724cc34fedffe9a2a29fb54fa9169cd1"
@@ -127,54 +45,13 @@
 
 [[projects]]
   branch = "master"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
-  revision = "a3beeb748656e13e54256fd2cde19e058f41f60f"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/net"
-  packages = [
-    "context",
-    "context/ctxhttp"
-  ]
-  revision = "dfa909b99c79129e1100513e5cd36307665e5723"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/oauth2"
-  packages = [
-    ".",
-    "internal"
-  ]
-  revision = "770e5ebd4ab27c4d70b0983674d138217f5e2c72"
-
-[[projects]]
-  branch = "master"
   name = "golang.org/x/sys"
-  packages = [
-    "unix",
-    "windows"
-  ]
+  packages = ["unix"]
   revision = "e2c7578ad1a9fc1a9166e96605d4790a88030ece"
-
-[[projects]]
-  name = "google.golang.org/appengine"
-  packages = [
-    "internal",
-    "internal/base",
-    "internal/datastore",
-    "internal/log",
-    "internal/remote_api",
-    "internal/urlfetch",
-    "urlfetch"
-  ]
-  revision = "150dc57a1b433e64154302bdc40b6bb8aefa313a"
-  version = "v1.0.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5a56b7465e4affe2568d73ffc1208e375e7720100db26112d60d94c2dcbea4f1"
+  inputs-digest = "c5e4ad690cd2a022372f88bdd381b1f520e421e5cae42c1ad6847f3472973147"
   solver-name = "gps-cdcl"
   solver-version = 1

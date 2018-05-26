@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/janeczku/go-spinner"
+	"github.com/briandowns/spinner"
 	sw "github.com/mattn/go-shellwords"
 	"github.com/pkg/errors"
 	"github.com/urfave/cli"
@@ -61,8 +61,11 @@ func main() {
 }
 
 func run(cmd Command) error {
-	s := spinner.StartNew("Start installing...")
 	st := time.Now()
+	s := spinner.New(spinner.CharSets[14], 100*time.Millisecond)
+	s.Suffix = " Installing package..."
+	s.Writer = os.Stderr
+	s.Start()
 
 	gobinPath, err := getCommandPath("$GOPATH")
 	cmd.path = gobinPath + cmd.name
