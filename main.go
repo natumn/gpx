@@ -36,7 +36,10 @@ func main() {
 
 	app.Action = func(c *cli.Context) error {
 
-		cmd := NewCommand(c)
+		cmd, err := NewCommand(c)
+		if err != nil {
+			return err
+		}
 
 		path, _ := exec.LookPath(cmd.name)
 
@@ -150,24 +153,34 @@ func uninstall(path string) error {
 }
 
 // NewCommand is make command struct
-func NewCommand(c *cli.Context) Command {
+func NewCommand(c *cli.Context) (Command, error) {
+	const errtag = "NewCommand():"
+	var err error
+
 	var cmd Command
 	b := c.GlobalString("businesscard")
 
 	if b == "" {
 		args := c.Args()
 		cmd.repo = args[0]
-		cmd.name = getName(cmd.repo)
+		cmd.name, err = getName(cmd.repo)
+		if err != nil {
+			return cmd, errors.Wrap(err, errtag)
+		}
 		cmd.args = args[1:]
 	} else {
 		cmd.name = b
 		cmd.repo = "github.com/" + b + "/" + b
 	}
 
-	return cmd
+	return cmd, nil
 }
 
-func getName(repo string) string {
+func getName(repo string) (string, error) {
 	slice := strings.Split(repo, "/")
-	return slice[2]
+	if len(slice) < 3 {
+		return "", errors.New("getName(): Unknown format repository")
+	}
+
+	return slice[2], nil
 }
